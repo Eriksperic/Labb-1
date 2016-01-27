@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(void){
+
+
+    while(1<2){
+    int vinkel;
+     printf("Ange en positiv vinkel i hela grader: ");
+
+    scanf("%d", &vinkel);
+
+
+
+    if(vinkel<90 && vinkel>0){
+        printf("\nVINKELN IS SPETSIG!\n");
+    }
+
+    else if(vinkel>90 && vinkel<360){
+            printf("\nVINKELN IS TRUBBIG!\n ");
+        }
+
+    else if(vinkel==90){
+        printf("\nVINKELN IS RIGHT\n");
+
+    }
+
+    else{
+        printf("ERROR: THE VINKEL YOU ANGAV WAS 
+
+NOT IN THE SPAN OF VINKLAR YOU CAN ANGE!\n");
+    }
+
+    }
+
+
+    return 0;
+}
