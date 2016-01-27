@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main(void)
+{
+    int cont;
+    while(cont=1){
+
+    int siffra;
+    printf("Ange ett heltal mellan 0 och 5!\n");
+    scanf("%d", &siffra);
+    switch(siffra){
+        case 0: printf("Morsekod: ­­­­­\n"); break;
+        case 1: printf("Morsekod: .­­­­\n"); break;
+        case 2: printf("Morsekod: ..­­­\n"); break;
+        case 3: printf("Morsekod: ...--\n"); break;
+        case 4: printf("Morsekod: ....-\n"); break;
+        case 5: printf("Morsekod: .....\n"); break;
+        default: printf("Error: The input number must be an integer between 0 and 5!");
+
+
+        }
+        printf("\nVill du ange en till siffra?\n Skriv `1` om du vill testa igen.\n eller skriv `0` om du vill avsluta programmet. ");
+        scanf("%d", &cont);
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    return 0;
+}
