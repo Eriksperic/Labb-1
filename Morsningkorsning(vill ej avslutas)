@@ -1,8 +1,8 @@
 #include <stdio.h>
 int main(void)
 {
-    int cont;
-    while(cont=1){
+    int cont=1;
+    while(cont==1){
 
     int siffra;
     printf("Ange ett heltal mellan 0 och 5!\n");
