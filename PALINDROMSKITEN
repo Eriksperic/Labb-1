@@ -1,0 +1,145 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <ctype.h>
+int isPalindrome(char inputString[]);
+void backwards(char string[]);
+int stringLength(char string[]);
+void copyString(char Target[], char Source[]);
+void removeSpacesandKrumilutter(char original[], char noSpaces[]);
+void UPPERCASEtolowercase(char original[], char lowercased[]);
+
+int main(void){
+    
+    
+    char textstring[100];
+    fgets(textstring, 100, stdin);
+    
+    
+    
+    isPalindrome(textstring);
+    
+    
+    return 0;
+}
+
+
+// Funktion som skriver arrayen baklänges!
+void backwards(char string[]){
+  
+    char reverseString[100];
+    int i, length = 0;
+    
+
+    for (i = 0; string[i] != '\0'; i++) {
+        length++;
+        
+    }
+    
+    for (i = 0; i < length; i++) {
+        reverseString[i] = string[length - i - 1];
+       
+        
+    }
+    
+    for ( i = 0; i < length; i++){
+        string[i] = reverseString[i];
+    }
+    
+    
+}
+
+
+
+// Funktion som returnerar en char-strängs längd.
+int stringLength(char string[]){
+    int length, i;
+    
+    for (i = 0; string[i] != '\0'; i++) {
+        length++;
+        
+    }
+    
+    return length;
+}
+
+// Funktion som kopierar en sträng till en annan.
+void copyString(char Target[], char Source[]){
+    
+    int i;
+    for (i = 0; Source[i] != '\0'; i++) {
+        Target[i] = Source[i];
+    }
+    
+    
+}
+
+
+// Funktion som tar bort mellanslag och de flesta symboler från en textsträng!
+void removeSpacesandKrumilutter(char original[], char noSpaces[]){
+    
+    int i, x = 0;
+    for (i = 0; original[i] != '\0'; i++) {
+        if (original[i] == ' ') {
+            
+            
+        }
+        else if(original[i] < 'A') {
+            
+        }
+        
+        else
+        {
+            noSpaces[x] = original[i];
+            x++;
+        }
+    
+    
+        
+        
+        
+    }
+}
+// Funktion som omvandlar versaler till gemener i en textsträng.
+void UPPERCASEtolowercase(char original[], char lowercased[]){
+    int i = 0;
+    
+    for (i = 0; original[i] != '\0'; i++) {
+        if (original[i] >= 'A' && original[i] <= 'Z') {
+            lowercased[i] = original[i] +  32;
+        }
+    }
+}
+
+
+
+
+
+// Funktion som avgör om den inmatade textsträngen är ett palindrom eller ej.
+ int isPalindrome(char inputString[]){
+    
+    int length, check = 0;
+     char reverseString[100], editString[100];
+     
+     copyString(reverseString, inputString);
+     backwards(reverseString);
+     printf("Reverse: %s \n", reverseString);
+    
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    
+     length = stringLength(inputString);
+    
+     return check;
+}
+
