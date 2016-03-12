@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+
+int main(void){
+    int numberArray[100], i, count = 0, *pointNum, *pointSearch;
+    
+    
+    printf("Enter numbers ranging from 1-1000 (maximum 100), finish by entering a negative number: ");
+    for (i = 0; i < 100; i++) {
+        
+        printf("Number: ");
+        scanf("%d", &numberArray[i]);
+        count++;
+            if (numberArray[i] < 0) {
+                count--;                //Count minskar med ett för att få bort det sista negativa numret.
+                break;
+                
+            }
+            else if (numberArray[i] > 1000){
+                printf("Can you read? That number was greater than 1000.. \nTry again..\n");
+                return 0;
+            }
+        
+    }
+   
+    
+    
+
+
+    
+    return 0;
+}
+
+
+void search(int* pointNum, int *pointSearch){
+    int i;
+    
+    for (i = 0; i >; <#increment#>) {
+        <#statements#>
+    }
+    
+
+}
+
+
+
